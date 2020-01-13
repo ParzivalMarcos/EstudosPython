@@ -75,6 +75,20 @@ def secao7_exercicio_6():
     print(f'Todos os números digitados {vetor}')
 
 
+def secao7_exercicio_7():
+    print('Escreva um programa que leia 10 números inteiros e os armazene em um vetor.\n'
+          'Imprima o vetor, o maior elemento e a posição que ele se encontra.')
+    vetor = []
+    posicao = 0
+    for i in range(0, 10):
+        numero = int(input(f'Insira um número inteiro: '))
+        vetor.append(numero)
+        if vetor[i] > vetor[i - 1]:
+            posicao = vetor[i]
+    print(f'O vetor completo {vetor}\n'
+          f'O maior elemento, é {max(vetor)} e se encontra na posição {posicao}')
+
+
 def menu():
     print('Escolha uma seção de exercicios')
     print('Seção [4]\tSeção [5]\nSeção [6]\tSeção [7]\nSeção [8]')
@@ -95,6 +109,9 @@ def menu():
             continuar()
         elif num_exercicio == 6:
             secao7_exercicio_6()
+            continuar()
+        elif num_exercicio == 7:
+            secao7_exercicio_7()
             continuar()
         else:
             print('Questão invalida!!')
