@@ -89,6 +89,31 @@ def secao7_exercicio_7():
           f'O maior elemento, é {max(vetor)} e se encontra na posição {posicao}')
 
 
+def secao7_exercicio_8():
+    print('Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela'
+          'todos os valores lidos na ordem inversa')
+    valores = []
+    for num in range(0, 6):
+        valor = int(input('Insira um numero inteiro: '))
+        valores.append(valor)
+    valores.reverse()
+    print(valores)
+
+
+def secao7_exercicio_9():
+    print('Crie um programa que lê 6 valores inteiros pares e, em seguida,'
+          'mostre na tela os valores lidos na ordem inversa.')
+    valores = []
+    for num in range(0, 6):
+        valor = int(input('Insira um valor inteiro e que seja par: '))
+        if not valor % 2:
+            valores.append(valor)
+        else:
+            num -= 1
+    valores.reverse()
+    print(valores)
+
+
 def menu():
     print('Escolha uma seção de exercicios')
     print('Seção [4]\tSeção [5]\nSeção [6]\tSeção [7]\nSeção [8]')
@@ -112,6 +137,12 @@ def menu():
             continuar()
         elif num_exercicio == 7:
             secao7_exercicio_7()
+            continuar()
+        elif num_exercicio == 8:
+            secao7_exercicio_8()
+            continuar()
+        elif num_exercicio == 9:
+            secao7_exercicio_9()
             continuar()
         else:
             print('Questão invalida!!')
